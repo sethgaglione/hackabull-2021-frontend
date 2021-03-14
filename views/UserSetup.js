@@ -27,112 +27,112 @@ export default function UserSetup() {
       <Text style={styles.title}>Personal Information</Text>
       <TextInput
         style={styles.input}
-        onChangeText={firstName}
-        value={onChangeFirst}
+        value={firstName}
+        onChangeText={onChangeFirst}
         placeholder="First Name"
       />
       <TextInput
         style={styles.input}
-        onChangeText={lastName}
-        value={onChangeLast}
+        value={lastName}
+        onChangeText={onChangeLast}
         placeholder="Last Name"
       />
       <TextInput
         style={styles.input}
-        onChangeText={email}
-        value={onChangeEmail}
+        value={email}
+        onChangeText={onChangeEmail}
         placeholder="Email"
         keyboardType="email-address"
       />
       <TextInput
         style={styles.input}
-        onChangeText={username}
-        value={onChangeUser}
+        value={username}
+        onChangeText={onChangeUser}
         placeholder="Username"
       />
       <TextInput
         style={styles.input}
-        onChangeText={password}
-        value={onChangePass}
+        value={password}
+        onChangeText={onChangePass}
         placeholder="Password"
       />
       <TextInput
         style={styles.input}
-        onChangeText={passwordCheck}
-        value={onChangePassCheck}
+        value={passwordCheck}
+        onChangeText={onChangePassCheck}
         placeholder="Password Check"
       />
       <TextInput
         style={styles.input}
-        onChangeText={phone}
-        value={onChangePhone}
+        value={phone}
+        onChangeText={onChangePhone}
         placeholder="Phone #"
         keyboardType="phone-pad"
       />
       <TextInput
         style={styles.input}
-        onChangeText={dob}
-        value={onChangeDob}
+        value={dob}
+        onChangeText={onChangeDob}
         placeholder="Date of Birth"
       />
       <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
-        onChangeText={conOneName}
-        value={onChangeConOneName}
+        value={conOneName}
+        onChangeText={onChangeConOneName}
         placeholder="Name"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conOnePhone}
-        value={onChangeConOnePhone}
+        value={conOnePhone}
+        onChangeText={onChangeConOnePhone}
         placeholder="Phone #"
         keyboardType="phone-pad"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conOneRelationship}
-        value={onChangeConOneRelationship}
+        value={conOneRelationship}
+        onChangeText={onChangeConOneRelationship}
         placeholder="Relationship"
       />
       <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
-        onChangeText={conTwoName}
-        value={onChangeConTwoName}
+        value={conTwoName}
+        onChangeText={onChangeConTwoName}
         placeholder="Name"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conTwoPhone}
-        value={onChangeConTwoPhone}
+        value={conTwoPhone}
+        onChangeText={onChangeConTwoPhone}
         placeholder="Phone #"
         keyboardType="phone-pad"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conTwoRelationship}
-        value={onChangeConTwoRelationship}
+        value={conTwoRelationship}
+        onChangeText={onChangeConTwoRelationship}
         placeholder="Relationship"
       />
       <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
-        onChangeText={conThreeName}
-        value={onChangeConThreeName}
+        value={conThreeName}
+        onChangeText={onChangeConThreeName}
         placeholder="Name"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conThreePhone}
-        value={onChangeConThreePhone}
+        value={conThreePhone}
+        onChangeText={onChangeConThreePhone}
         placeholder="Phone #"
         keyboardType="phone-pad"
       />
       <TextInput
         style={styles.input}
-        onChangeText={conThreeRelationship}
-        value={onChangeConThreeRelationship}
+        value={conThreeRelationship}
+        onChangeText={onChangeConThreeRelationship}
         placeholder="Relationship"
       />
     </ScrollView>

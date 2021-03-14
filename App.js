@@ -35,9 +35,9 @@ function StackNavigator() {
           options={{ title: "Dashboard" }}
         />
         <Stack.Screen
-          name="Emergency Settings"
+          name="Emergency"
           component={EmergencySettings}
-          options={{ title: "EmergencySettings" }}
+          options={{ title: "Emergency Settings" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

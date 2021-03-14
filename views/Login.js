@@ -14,14 +14,14 @@ export default function Login() {
         <Text style={styles.h1}>Returning Users</Text>
         <TextInput
           style={styles.input}
-          onChangeText={email}
-          value={onChangeEmail}
+          value={email}
+          onChangeText={onChangeEmail}
           placeholder="Email"
         />
         <TextInput
           style={styles.input}
-          onChangeText={password}
-          value={onChangePassword}
+          value={password}
+          onChangeText={onChangePassword}
           placeholder="Password"
         />
         <Button

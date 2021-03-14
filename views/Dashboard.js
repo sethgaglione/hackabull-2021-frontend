@@ -20,7 +20,7 @@ export default function Dashboard() {
         title="Emergency Settings"
         color={"#BB0A21"}
         style={styles.EmergencySettingsBtn}
-        onPress={() => navigation.navigate("EmergencySettings")}
+        onPress={() => navigation.navigate("Emergency")}
       />
     </View>
   );
