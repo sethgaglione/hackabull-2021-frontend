@@ -12,18 +12,7 @@ export default function EnergencySettings() {
     <View style={styles.container}>
       <View style={{ marginTop: 100 }}>
         <Text style={styles.h1}>Returning Users</Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={email}
-          value={onChangeEmail}
-          placeholder="Email"
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={password}
-          value={onChangePassword}
-          placeholder="Password"
-        />
+
         <Button
           title="Login"
           color={"#76B6D2"}

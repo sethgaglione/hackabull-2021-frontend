@@ -28,7 +28,7 @@ export default function Dashboard() {
 
 const styles = StyleSheet.create({
   EmergencySettingsBtn: {
-    marginTop: 40,
+    marginTop: 80,
   },
   SmallNav: {
     alignSelf: "stretch",
