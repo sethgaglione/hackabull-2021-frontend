@@ -2,38 +2,61 @@ import React, { Component } from "react";
 import {
   TouchableHighlight,
   Text,
+  TextInput,
   TouchableOpacity,
   StyleSheet,
   View,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Dialog from "react-native-dialog";
 
-export default function SafetyButton({ redirect }) {
+export default function SafetyButton() {
   const navigation = useNavigation();
 
   var [isPress, setIsPress] = React.useState(false);
   var [text, setText] = React.useState("Press");
+  var [visible, setVisible] = React.useState(false);
+  const [number, setNumber] = React.useState(null);
+  const PIN = 1234;
+
+  const checkPassword = () => {
+    if (number == PIN) {
+      setVisible(false);
+    }
+  };
+
+  const released = () => {
+    setText("Press");
+    setVisible(true);
+  };
 
   var touchProps = {
     activeOpacity: 1,
-    underlayColor: "#BC4F5D", // <-- "backgroundColor" will be always overwritten by "underlayColor"
-    style: isPress ? styles.insideRoundButtonPressed : styles.insideRoundButton, // <-- but you can still apply other style changes
+    underlayColor: "#BC4F5D",
+    style: isPress ? styles.insideRoundButtonPressed : styles.insideRoundButton,
     onHideUnderlay: () => setIsPress(false),
     onShowUnderlay: () => setIsPress(true),
-    onPress: () => console.log("HELLO"), // <-- "onPress" is apparently required
-    //Need it to change back to Press when it isn't being held anymore
+    onPressIn: () => setText("Hold"),
+    onPressOut: () => released(),
   };
+
+  var changeFunct = {};
 
   return (
     <View>
-      <TouchableOpacity
-        onPress={() => navigation.navigate(redirect)}
-        style={styles.roundButton}
-      >
-        <TouchableHighlight
-          onPress={() => navigation.navigate(redirect)}
-          {...touchProps}
-        >
+      <Dialog.Container visible={visible}>
+        <Dialog.Title>Enter PIN</Dialog.Title>
+        <Dialog.Input
+          keyboardType="phone-pad"
+          placeholder="ENTER PIN"
+          maxLength={4}
+          onChangeText={(number) => setNumber(number)}
+          onSubmitEditing={() => checkPassword()}
+        ></Dialog.Input>
+      </Dialog.Container>
+
+      <TouchableOpacity style={styles.roundButton}>
+        <TouchableHighlight {...touchProps}>
           <View>
             <Text style={{ color: "white", fontSize: 19 }}>{text}</Text>
           </View>
