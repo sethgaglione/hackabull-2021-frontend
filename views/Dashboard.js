@@ -11,7 +11,14 @@ export default function Dashboard() {
     <View style={styles.container}>
       <SmallNav />
       <SafetyButton />
-      <Text style={{ color: "#BB0A21", width: 310, textAlign: "center" }}>
+      <Text
+        style={{
+          color: "#BB0A21",
+          width: 310,
+          textAlign: "center",
+          marginBottom: 150,
+        }}
+      >
         Keep holding until you feel safe. You will be asked to enter a pin when
         you let go. IF you don't enter that pin in 15 seconds, then your
         location will be pinged and authorities called.

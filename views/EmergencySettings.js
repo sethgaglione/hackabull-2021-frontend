@@ -10,14 +10,13 @@ export default function EnergencySettings() {
 
   return (
     <View style={styles.container}>
-      <View style={{ marginTop: 100 }}>
-        <Text style={styles.h1}>Returning Users</Text>
-
+      <View style={{ marginTop: 40, width: 350 }}>
         <Button
-          title="Login"
+          title="Log Current Location"
           color={"#76B6D2"}
           onPress={() => navigation.navigate("Dashboard")}
         />
+        <Text style={styles.p}>Previous Logs:</Text>
       </View>
     </View>
   );
