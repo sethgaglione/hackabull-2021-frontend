@@ -1,22 +1,39 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
 
 export default function Login() {
   const navigation = useNavigation();
 
-  const [email, onChangeEmail] = React.useState(null);
+  const [user, onChangeUser] = React.useState(null);
   const [password, onChangePassword] = React.useState(null);
-
+  const [token, setToken] = React.useState("");
+  function login() {
+    axios
+      .post("https://hackabull-2021.herokuapp.com/login", {
+        username: user,
+        password: password,
+      })
+      .then((res) => {
+        console.log("logged in");
+        global.token = res.data.token;
+        console.log(global.token);
+        navigation.navigate("Dashboard");
+      })
+      .catch((res) => {
+        console.log("error in login");
+      });
+  }
   return (
     <View style={styles.container}>
       <View style={{ marginTop: 100 }}>
         <Text style={styles.h1}>Returning Users</Text>
         <TextInput
           style={styles.input}
-          value={email}
-          onChangeText={onChangeEmail}
-          placeholder="Email"
+          value={user}
+          onChangeText={onChangeUser}
+          placeholder="User"
         />
         <TextInput
           style={styles.input}
@@ -24,11 +41,7 @@ export default function Login() {
           onChangeText={onChangePassword}
           placeholder="Password"
         />
-        <Button
-          title="Login"
-          color={"#76B6D2"}
-          onPress={() => navigation.navigate("Dashboard")}
-        />
+        <Button title="Login" color={"#76B6D2"} onPress={() => login()} />
       </View>
     </View>
   );

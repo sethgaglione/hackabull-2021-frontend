@@ -7,7 +7,6 @@ export default function UserSetup() {
   const [email, onChangeEmail] = React.useState(null);
   const [username, onChangeUser] = React.useState(null);
   const [password, onChangePass] = React.useState(null);
-  const [passwordCheck, onChangePassCheck] = React.useState(null);
   const [phone, onChangePhone] = React.useState(null);
   const [dob, onChangeDob] = React.useState(null);
   const [conOneName, onChangeConOneName] = React.useState(null);
@@ -58,12 +57,6 @@ export default function UserSetup() {
       />
       <TextInput
         style={styles.input}
-        value={passwordCheck}
-        onChangeText={onChangePassCheck}
-        placeholder="Password Check"
-      />
-      <TextInput
-        style={styles.input}
         value={phone}
         onChangeText={onChangePhone}
         placeholder="Phone #"
@@ -75,7 +68,7 @@ export default function UserSetup() {
         onChangeText={onChangeDob}
         placeholder="Date of Birth"
       />
-      <Text style={styles.title}>Emergency Contact</Text>
+      <Text style={styles.title}>Emergency Contact 1</Text>
       <TextInput
         style={styles.input}
         value={conOneName}
@@ -95,7 +88,7 @@ export default function UserSetup() {
         onChangeText={onChangeConOneRelationship}
         placeholder="Relationship"
       />
-      <Text style={styles.title}>Emergency Contact</Text>
+      <Text style={styles.title}>Emergency Contact 2</Text>
       <TextInput
         style={styles.input}
         value={conTwoName}
@@ -115,7 +108,7 @@ export default function UserSetup() {
         onChangeText={onChangeConTwoRelationship}
         placeholder="Relationship"
       />
-      <Text style={styles.title}>Emergency Contact</Text>
+      <Text style={styles.title}>Emergency Contact 3</Text>
       <TextInput
         style={styles.input}
         value={conThreeName}
