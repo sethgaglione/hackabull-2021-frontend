@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import UserSetup from "./views/UserSetup";
 import FirstScreen from "./views/FirstScreen";
+import Login from "./views/Login";
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,11 @@ function StackNavigator() {
           name="UserSetup"
           component={UserSetup}
           options={{ title: "User Setup" }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ title: "Login" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
