@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import UserSetup from "./views/UserSetup";
 import FirstScreen from "./views/FirstScreen";
 import Login from "./views/Login";
+import Dashboard from "./views/Dashboard";
+import EmergencySettings from "./views/EmergencySettings";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,16 @@ function StackNavigator() {
           name="Login"
           component={Login}
           options={{ title: "Login" }}
+        />
+        <Stack.Screen
+          name="Dashboard"
+          component={Dashboard}
+          options={{ title: "Dashboard" }}
+        />
+        <Stack.Screen
+          name="Emergency Settings"
+          component={EmergencySettings}
+          options={{ title: "EmergencySettings" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

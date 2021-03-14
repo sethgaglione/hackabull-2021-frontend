@@ -24,9 +24,7 @@ export default function UserSetup() {
 
   return (
     <ScrollView style={{ backgroundColor: "#F1FDFF" }}>
-      <Text style={{ color: "black", paddingLeft: 20, marginTop: 10 }}>
-        Personal Information
-      </Text>
+      <Text style={styles.title}>Personal Information</Text>
       <TextInput
         style={styles.input}
         onChangeText={firstName}
@@ -77,9 +75,7 @@ export default function UserSetup() {
         value={onChangeDob}
         placeholder="Date of Birth"
       />
-      <Text style={{ color: "black", paddingLeft: 20 }}>
-        Emergency Contact One
-      </Text>
+      <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
         onChangeText={conOneName}
@@ -99,9 +95,7 @@ export default function UserSetup() {
         value={onChangeConOneRelationship}
         placeholder="Relationship"
       />
-      <Text style={{ color: "black", paddingLeft: 20 }}>
-        Emergency Contact Two
-      </Text>
+      <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
         onChangeText={conTwoName}
@@ -121,9 +115,7 @@ export default function UserSetup() {
         value={onChangeConTwoRelationship}
         placeholder="Relationship"
       />
-      <Text style={{ color: "black", paddingLeft: 20 }}>
-        Emergency Contact Three
-      </Text>
+      <Text style={styles.title}>Emergency Contact</Text>
       <TextInput
         style={styles.input}
         onChangeText={conThreeName}
@@ -150,6 +142,13 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 12,
-    borderWidth: 1,
+    borderBottomColor: "#2978A0",
+    borderBottomWidth: 1,
+  },
+  title: {
+    color: "#2978A0",
+    paddingLeft: 10,
+    paddingVertical: 10,
+    fontSize: 25,
   },
 });

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Login() {
+export default function EnergencySettings() {
   const navigation = useNavigation();
 
   const [email, onChangeEmail] = React.useState(null);
